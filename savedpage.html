@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Recipe Finder</title>
+  <link id="stylesheet" rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-layout">
+        <div class="top-section">
+            <div class="title-section">
+                <div class="app-title">Recipe Finder</div>
+                <img class="logo-button" src="/images/chefhat.png" />
+            </div>
+            <div class="tabs-section">
+                <div class="tabs">
+                    <button class="browse-tab" style="color: #9D8F71;" onclick="goToHomePage()">Browse</button>
+                    <button class="saved-tab" style="color: #6D5176;" onclick="goToSavedPage()">Saved</button>
+                </div>
+                <div class="filters">
+                    <button class="filter-button">All</button>
+                    <button class="filter-button">Breakfast</button>
+                    <button class="filter-button">Lunch</button>
+                    <button class="filter-button">Dinner</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="savedRecipes" class="grid-container">
+            
+        </div>
+        <button class="surprise"onclick="showRandomItem()"> Surprise Me </button>
+        </div>
+    </div>
+    <script src="savedrecipe.js"></script>
+</body>
+</html>

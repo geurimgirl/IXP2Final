@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Recipe Finder</title>
+  <link id="stylesheet" rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-layout">
+        <div class="top-section">
+            <div class="title-section">
+                <div class="app-title">Recipe Finder</div>
+                <img class="logo-button" src="/images/chefhat.png" />
+            </div>
+            <div class="tabs-section">
+                <div class="tabs">
+                    <button class="browse-tab" onclick="goToHomePage()">Browse</button>
+                    <button class="saved-tab" onclick="goToSavedPage()">Saved</button>
+                </div>
+                <div class="filters">
+                    <button class="filter-button" onclick="filterItems('filter-all')">All</button>
+                    <button class="filter-button" onclick="filterItems('filter-breakfast')">Breakfast</button>
+                    <button class="filter-button" onclick="filterItems('filter-lunch')">Lunch</button>
+                    <button class="filter-button" onclick="filterItems('filter-dinner')">Dinner</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="recipeCards" class="grid-container">
+
+            <!-- Chicken Curry -->
+            <div class="recipe-card-item" id="item1" data-filter="filter-lunch">
+                <a href="chickencurry.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/chickencurry.png"/>
+                    <div class="recipe-card-title">Chicken Curry</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item1')">
+                    <img style="width: 40px; height:40px;" src="images/star_light.png" id="star_light"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+
+            <!-- Chocolate Strawberry Crepe -->
+            <div class="recipe-card-item" id="item2" data-filter="filter-breakfast">
+                <a href="crepe.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/crepe.png"/>
+                    <div class="recipe-card-title">Chocolate Strawberry Crepe</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item2')">
+                    <img style="width: 40px; height:40px;" src="images/star_light.png" id="star_light"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+
+            <!-- Loaded Baked Potato Soup -->
+            <div class="recipe-card-item" id="item3" data-filter="filter-lunch">
+                <a href="potatosoup.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/potatosoup.png"/>
+                    <div class="recipe-card-title">Loaded Baked Potato Soup</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item3')">
+                    <img style="width: 40px; height:40px;" src="images/star_light.png" id="star_light"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+
+            <!-- Dutch Oven Jalapeño Bread -->
+            <div class="recipe-card-item" id="item4" data-filter="filter-lunch">
+                <a href="jalapeñobread.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/jalapenobread.png"/>
+                    <div class="recipe-card-title">Dutch Oven Jalapeño Bread</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item4')">
+                    <img style="width: 40px; height:40px;" src="images/star_light.png" id="star_light"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+
+            <!-- Berry Smoothie Bowl -->
+            <div class="recipe-card-item" id="item5" data-filter="filter-breakfast">
+                <a href="berrysmoothiebowl.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/berry.png"/>
+                    <div class="recipe-card-title">Berry Smoothie Bowl</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item5')">
+                    <img style="width: 40px; height:40px;" src="images/star_light.png" id="star_light"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+
+             <!-- Salmon -->
+             <div class="recipe-card-item"id="item6" data-filter="filter-dinner">
+                <a href="salmon.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/salmon.png"/>
+                    <div class="recipe-card-title">Honey Soy- Glazed Salmon</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item6')">
+                    <img style="width: 40px; height:40px;" src="images/star_light.png" id="star_light"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+
+            <!-- Pancakes -->
+            <div class="recipe-card-item" id="item7" data-filter="filter-breakfast">
+                <a href="pancake.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/pancake.png"/>
+                    <div class="recipe-card-title">Japanese Fluffy Pancakes</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item7')">
+                    <img style="width: 40px; height:40px;" src="images/star_light.png" id="star_light"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+
+            <!-- Pasta -->
+            <div class="recipe-card-item" id="item8" data-filter="filter-dinner">
+                <a href="pasta.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/shrimppasta.png"/>
+                    <div class="recipe-card-title">One-Pot Lemon Garlic Shrimp Pasta</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item8')">
+                    <img id="star-icon" style="width: 40px; height:40px;" src="images/star_light.png"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+            
+             <!-- Steak -->
+             <div class="recipe-card-item" id="item9" data-filter="filter-dinner">
+                <a href="steak.html">
+                <div class="recipe-card">
+                    <img class="recipe-card-image" src="images/steak.png"/>
+                    <div class="recipe-card-title">Garlic Butter Steak</div>
+                </div>
+                </a>
+                <button class="star-button" onclick="saveRecipe('item9')">
+                    <img style="width: 40px; height:40px;" src="images/star_light.png" id="star_light"
+                    onclick="changeButton(this)" />
+                </button>
+            </div>
+        </div>
+        <button class="surprise" onclick="showRandomItem()"> Surprise Me </button>
+        </div>
+    </div>
+    <script src="recipe.js"></script>
+</body>
+</html>
